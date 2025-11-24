@@ -1,0 +1,58 @@
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Data files
+*.csv
+*.xlsx
+*.db
+*.sqlite
+
+# Model files
+*.h5
+*.keras
+*.pkl
+*.joblib
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Training outputs
+*.png
+*.jpg
+*.jpeg
+*.pdf
+Rplots.pdf
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
+
+# Distribution
+dist/
+build/
+*.egg-info/
