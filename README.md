@@ -28,144 +28,145 @@
 - <a href="https://www.linkedin.com/company/inova-fusca">ANDRÉ GODOI CHIOVATO</a>
 
 
-# FarmTech Solutions - Phase 7: Consolidated System
+# FarmTech Solutions - Fase 7: Sistema Consolidado
 
-![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.13+-orange.svg)
+![Python](https://img.shields.io/badge/python-3.10--3.12-blue.svg)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.16+-orange.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)
 
 **IA como Fertilizante Digital - Um Novo Agronegócio do Amanhã**
 
-Phase 7 consolidates all previous phases (1-6) of the FarmTech Solutions project into a unified agricultural intelligence system with advanced LSTM-based time series prediction capabilities.
+A Fase 7 consolida todas as fases anteriores (1-6) do projeto FarmTech Solutions em um sistema unificado de inteligência agrícola com capacidades avançadas de previsão de séries temporais baseadas em LSTM.
 
-## 🌟 Features
+## 🌟 Funcionalidades
 
-- **Consolidated System**: Unified interface for all FarmTech subsystems
-- **LSTM Time Series Prediction**: Advanced forecasting for agricultural sensor data
-- **Interactive Dashboard**: Real-time visualization with Streamlit
-- **Multi-Sensor Support**: Temperature, humidity, soil moisture, light intensity, pH monitoring
-- **Modular Architecture**: Easy integration with previous phase implementations
-- **Sample Data Generation**: Built-in synthetic data for testing and demonstration
+- **Sistema Consolidado**: Interface unificada para todos os subsistemas FarmTech
+- **Previsão de Séries Temporais com LSTM**: Previsões avançadas para dados de sensores agrícolas
+- **Dashboard Interativo**: Visualização em tempo real com Streamlit
+- **Suporte Multi-Sensores**: Monitoramento de temperatura, umidade, umidade do solo, intensidade luminosa e pH
+- **Arquitetura Modular**: Fácil integração com implementações de fases anteriores
+- **Geração de Dados de Exemplo**: Dados sintéticos integrados para testes e demonstração
 
-## 📋 Requirements
+## 📋 Requisitos
 
-- Python 3.8 or higher
-- TensorFlow 2.13+
+- Python 3.10 a 3.12 (recomendado)
+- TensorFlow 2.16+
 - Streamlit 1.28+
-- See `requirements.txt` for complete list
+- Veja `requirements.txt` para lista completa
 
-## 🚀 Quick Start
+> **Nota para Python 3.14**: O TensorFlow oficial ainda não suporta Python 3.14. Use Python 3.12 ou instale a versão nightly: `pip install tf-nightly`
 
-### 1. Setup Virtual Environment
+## 🚀 Início Rápido
+
+### 1. Configurar Ambiente Virtual
 
 ```bash
-cd /Users/mario/Dropbox/FIAP/Fase7
 python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate  # No Windows: venv\Scripts\activate
 ```
 
-### 2. Install Dependencies
+### 2. Instalar Dependências
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run the System
+### 3. Executar o Sistema
 
 ```bash
 python farmtech_main.py
 ```
 
-## 📖 Usage Guide
+## 📖 Guia de Uso
 
-### Main Menu Options
+### Opções do Menu Principal
 
-1. **Check System Status** - Verify availability of all subsystems
-2. **Generate Sample Data** - Create synthetic agricultural data (Fase2)
-3. **Start IoT Data Collection** - Begin sensor data collection (Fase3/4)
-4. **Train ML Models** - Train traditional machine learning models (Fase4)
-5. **Train LSTM Model** - Train time series prediction model (NEW)
-6. **Launch Dashboard** - Open consolidated Streamlit dashboard
-7. **Computer Vision** - Run crop analysis (Fase6)
-8. **System Information** - Display system details
-9. **Exit** - Close the application
+1. **Verificar Status do Sistema** - Verificar disponibilidade de todos os subsistemas
+2. **Gerar Dados de Exemplo** - Criar dados agrícolas sintéticos (Fase2)
+3. **Iniciar Coleta de Dados IoT** - Iniciar coleta de dados de sensores (Fase3/4)
+4. **Treinar Modelos ML** - Treinar modelos tradicionais de machine learning (Fase4)
+5. **Treinar Modelo LSTM** - Treinar modelo de previsão de séries temporais (NOVO)
+6. **Abrir Dashboard** - Abrir dashboard consolidado Streamlit
+7. **Visão Computacional** - Executar análise de culturas (Fase6)
+8. **Informações do Sistema** - Exibir detalhes do sistema
+9. **Sair** - Fechar a aplicação
 
-### Training LSTM Models
+### Treinamento de Modelos LSTM
 
 ```bash
-# From main menu, select option 5
-# Or run directly:
+# Do menu principal, selecione opção 5
+# Ou execute diretamente:
 python backend/train_lstm.py
 ```
 
-The training process will:
-- Generate sample data if none exists
-- Prepare sequences for LSTM input
-- Train the model with early stopping
-- Save the trained model to `models/saved_models/`
-- Generate training history plots
+O processo de treinamento irá:
+- Gerar dados de exemplo se não existirem
+- Preparar sequências para entrada LSTM
+- Treinar o modelo com early stopping
+- Salvar o modelo treinado em `models/saved_models/`
+- Gerar gráficos do histórico de treinamento
 
-### Launching the Dashboard
+### Abrindo o Dashboard
 
 ```bash
-# From main menu, select option 6
-# Or run directly:
+# Do menu principal, selecione opção 6
+# Ou execute diretamente:
 streamlit run dashboard/farmtech_consolidated_dashboard.py
 ```
 
-Dashboard features:
-- **Overview**: Latest sensor readings and recent trends
-- **Sensor Data**: Detailed analysis with time range selection
-- **Time Series Forecast**: LSTM-based predictions
-- **System Status**: Model and data availability
+Funcionalidades do dashboard:
+- **Visão Geral**: Leituras mais recentes dos sensores e tendências
+- **Dados dos Sensores**: Análise detalhada com seleção de intervalo de tempo
+- **Previsão de Séries Temporais**: Previsões baseadas em LSTM
+- **Status do Sistema**: Disponibilidade de modelos e dados
 
-## 📁 Project Structure
+## 📁 Estrutura do Projeto
 
 ```
 Fase7/
-├── farmtech_main.py              # Main entry point
-├── requirements.txt              # Python dependencies
+├── farmtech_main.py              # Ponto de entrada principal
+├── requirements.txt              # Dependências Python
 ├── config/
-│   └── system_config.py          # Centralized configuration
+│   └── system_config.py          # Configuração centralizada
 ├── models/
-│   ├── lstm_predictor.py         # LSTM model class
-│   ├── time_series_preprocessor.py  # Data preprocessing
-│   └── saved_models/             # Trained models (created at runtime)
+│   ├── lstm_predictor.py         # Classe do modelo LSTM
+│   ├── time_series_preprocessor.py  # Pré-processamento de dados
+│   └── saved_models/             # Modelos treinados (criado em tempo de execução)
 ├── backend/
-│   └── train_lstm.py             # LSTM training script
+│   └── train_lstm.py             # Script de treinamento LSTM
 ├── dashboard/
-│   └── farmtech_consolidated_dashboard.py  # Streamlit dashboard
+│   └── farmtech_consolidated_dashboard.py  # Dashboard Streamlit
 ├── utils/
-│   └── integration_helpers.py    # Integration utilities
-├── data/                         # Data storage (created at runtime)
-├── logs/                         # Log files (created at runtime)
-└── tests/                        # Unit tests (to be implemented)
+│   └── integration_helpers.py    # Utilitários de integração
+├── data/                         # Armazenamento de dados (criado em tempo de execução)
+├── logs/                         # Arquivos de log (criado em tempo de execução)
+└── tests/                        # Testes unitários (a serem implementados)
 ```
 
-## 🔧 Configuration
+## 🔧 Configuração
 
-Edit `config/system_config.py` to customize:
+Edite `config/system_config.py` para customizar:
 
-- **Paths**: Locations of previous phase implementations
-- **LSTM Parameters**: Sequence length, prediction horizon, model architecture
-- **Sensor Configuration**: Available sensor types
-- **Dashboard Settings**: Refresh intervals, display options
+- **Caminhos**: Localizações das implementações de fases anteriores
+- **Parâmetros LSTM**: Comprimento de sequência, horizonte de previsão, arquitetura do modelo
+- **Configuração de Sensores**: Tipos de sensores disponíveis
+- **Configurações do Dashboard**: Intervalos de atualização, opções de exibição
 
-## 🧪 LSTM Model Details
+## 🧪 Detalhes do Modelo LSTM
 
-### Architecture
+### Arquitetura
 
-- **Input**: Sequences of sensor readings (default: 24 time steps)
-- **LSTM Layers**: Configurable (default: [64, 32] units)
-- **Dropout**: Regularization to prevent overfitting (default: 0.2)
-- **Output**: Multi-step ahead predictions (default: 6 time steps)
+- **Entrada**: Sequências de leituras de sensores (padrão: 24 passos de tempo)
+- **Camadas LSTM**: Configurável (padrão: [64, 32] unidades)
+- **Dropout**: Regularização para prevenir overfitting (padrão: 0.2)
+- **Saída**: Previsões multi-passo à frente (padrão: 6 passos de tempo)
 
-### Training Configuration
+### Configuração de Treinamento
 
 ```python
 LSTM_CONFIG = {
-    "sequence_length": 24,      # Hours of history to use
-    "prediction_horizon": 6,    # Hours to predict ahead
+    "sequence_length": 24,      # Horas de histórico a usar
+    "prediction_horizon": 6,    # Horas a prever à frente
     "batch_size": 32,
     "epochs": 50,
     "learning_rate": 0.001,
@@ -174,97 +175,81 @@ LSTM_CONFIG = {
 }
 ```
 
-## 🔗 Integration with Previous Phases
+## 🔗 Integração com Fases Anteriores
 
-### Fase 2: Data Generation and Statistics
-- Agricultural data generation
-- Statistical analysis with R
-- Excel report generation
+### Fase 2: Geração de Dados e Estatísticas
+- Geração de dados agrícolas
+- Análise estatística com R
+- Geração de relatórios Excel
 
-### Fase 3: IoT Data Collection
-- ESP32/Arduino sensor integration
-- Real-time data collection
-- Basic dashboard visualization
+### Fase 3: Coleta de Dados IoT
+- Integração de sensores ESP32/Arduino
+- Coleta de dados em tempo real
+- Visualização básica em dashboard
 
 ### Fase 4: Machine Learning
-- Traditional ML model training
-- Streamlit dashboard
-- Model evaluation and predictions
+- Treinamento de modelos ML tradicionais
+- Dashboard Streamlit
+- Avaliação e previsões de modelos
 
-### Fase 6: Computer Vision
-- Crop image analysis
-- Object detection for agricultural monitoring
+### Fase 6: Visão Computacional
+- Análise de imagens de culturas
+- Detecção de objetos para monitoramento agrícola
 
-## 📊 Sample Data
+## 📊 Dados de Exemplo
 
-The system includes synthetic data generation for demonstration:
+O sistema inclui geração de dados sintéticos para demonstração:
 
-- **Temperature**: Daily cycle with realistic variations
-- **Humidity**: Inverse correlation with temperature
-- **Soil Moisture**: Decay with irrigation events
-- **Light Intensity**: Day/night cycle
-- **pH Level**: Stable with small variations
+- **Temperatura**: Ciclo diário com variações realistas
+- **Umidade**: Correlação inversa com temperatura
+- **Umidade do Solo**: Decaimento com eventos de irrigação
+- **Intensidade Luminosa**: Ciclo dia/noite
+- **Nível de pH**: Estável com pequenas variações
 
-## 🐛 Troubleshooting
+## 🐛 Solução de Problemas
 
-### Import Errors
+### Erros de Importação
 
-If you encounter import errors, ensure:
-1. Virtual environment is activated
-2. All dependencies are installed: `pip install -r requirements.txt`
-3. You're running from the Fase7 directory
+Se encontrar erros de importação, certifique-se de que:
+1. O ambiente virtual está ativado
+2. Todas as dependências estão instaladas: `pip install -r requirements.txt`
+3. Você está executando do diretório Fase7
 
-### TensorFlow Issues
+### Problemas com TensorFlow
 
-For M1/M2 Mac users:
+Para usuários de Mac M1/M2:
 ```bash
 pip install tensorflow-macos tensorflow-metal
 ```
 
-For GPU support on other systems, see [TensorFlow installation guide](https://www.tensorflow.org/install).
+Para suporte a GPU em outros sistemas, veja o [guia de instalação do TensorFlow](https://www.tensorflow.org/install).
 
-### Dashboard Not Loading
+### Dashboard Não Carrega
 
-Ensure Streamlit is installed:
+Certifique-se de que o Streamlit está instalado:
 ```bash
 pip install streamlit --upgrade
 streamlit --version
 ```
 
-## 📝 Development
+## 📝 Desenvolvimento
 
-### Adding New Sensors
+### Adicionando Novos Sensores
 
-1. Update `SENSOR_COLUMNS` in `config/system_config.py`
-2. Modify data generation in `backend/train_lstm.py`
-3. Update dashboard visualizations
+1. Atualize `SENSOR_COLUMNS` em `config/system_config.py`
+2. Modifique a geração de dados em `backend/train_lstm.py`
+3. Atualize as visualizações do dashboard
 
-### Extending LSTM Models
+### Estendendo Modelos LSTM
 
-1. Modify `LSTM_CONFIG` in `config/system_config.py`
-2. Adjust model architecture in `models/lstm_predictor.py`
-3. Update preprocessing in `models/time_series_preprocessor.py`
+1. Modifique `LSTM_CONFIG` em `config/system_config.py`
+2. Ajuste a arquitetura do modelo em `models/lstm_predictor.py`
+3. Atualize o pré-processamento em `models/time_series_preprocessor.py`
 
-## 📚 References
+## 📄 Licença
 
-Based on Phase 7 course materials:
-- Chapter 1: System Consolidation
-- Chapter 2: RNN and LSTM Networks
-- Chapter 3: Voice Recognition and Synthesis
-- Chapter 4: Genetic Algorithms
-- Chapters 5-7: AWS Services and AI
-- Chapter 8: ESP32 OOP Programming
-- Chapter 9: Cybersecurity
-
-## 👥 Authors
-
-- **Mário** (DevOps/SRE)
-- **AI Assistant** (Implementation Support)
-
-## 📄 License
-
-This project is part of the FIAP academic program.
+Este projeto faz parte do programa acadêmico da FIAP.
 
 ---
 
-**FarmTech Solutions** - Transforming agriculture through artificial intelligence 🌱
+**FarmTech Solutions** - Transformando a agricultura através da inteligência artificial 🌱

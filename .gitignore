@@ -56,3 +56,5 @@ Rplots.pdf
 dist/
 build/
 *.egg-info/
+
+*_env/
